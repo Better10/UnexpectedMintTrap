@@ -1,0 +1,32 @@
+ethereum_rpc = "https://0xrpc.io/hoodi"
+drosera_rpc = "https://relay.hoodi.drosera.io"
+eth_chain_id = 560048
+drosera_address = "0x91cB447BaFc6e0EA0F4Fe056F5a9b1F14bb06e5D"
+
+[traps]
+
+
+[traps.unexpected_mint]
+path = "out/UnexpectedMintTrap.sol/Trap.json"
+response_contract = "0xBcA2ffb06b399868d6eB388BFD85Ea7Eb7C9996F"
+response_function = "respondWithMintAlert(address,uint256,uint256,uint256)"
+cooldown_period_blocks = 0
+min_number_of_operators = 1
+max_number_of_operators = 5
+block_sample_size = 1
+private_trap = true
+whitelist = ["0xC9F8a0cccD046B2C5FC03cA291f7629c8b5546eC","0xB521D407c1De7D234e5E4313BAEae812311c3853", "0xD8a4724A8F0a7c9a028Ff10527Ea354eC82fE791", "0x0c5832C5fa862E1dBc765408f7987AAd4F7E7647"]
+address = "0xA72f982aa03F30CB4822d00f39b520731d28B53b"
+
+# Uncomment this to deploy the TransferEventTrap
+
+# [traps.transfer_event_trap]
+# path = "out/TransferEventTrap.sol/TransferEventTrap.json"
+# response_contract = "0x183D78491555cb69B68d2354F7373cc2632508C7"
+# response_function = "helloworld(string)"
+# cooldown_period_blocks = 33
+# min_number_of_operators = 1
+# max_number_of_operators = 2
+# block_sample_size = 10
+# private_trap = true
+# whitelist = []
